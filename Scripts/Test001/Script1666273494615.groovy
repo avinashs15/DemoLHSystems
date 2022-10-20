@@ -17,3 +17,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+Mobile.startExistingApplication('com.hmh.api', FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('Object Repository/Mobile/android.widget.TextView - Text'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Mobile/android.widget.TextView - LogTextBox'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Mobile/android.widget.Button - Add'), 0)
+
+Mobile.setText(findTestObject('Object Repository/Mobile/android_TextBox'), 
+    '0', 0)
+
+Mobile.takeScreenshotAsCheckpoint('Mob01', FailureHandling.STOP_ON_FAILURE)
+
+Mobile.pressBack()
+
+Mobile.closeApplication()
+
